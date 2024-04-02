@@ -19,7 +19,7 @@ if ! [[ "$1" =~ ^[0-9]+$ ]]; then
 fi
 
 # Regular expression to match URLs
-URL_REGEX='(http|https|ftp|ftps)://[^\s/$.?#].[^\s]*'
+URL_REGEX='(http|https|ftp|ftps)://[^\s/$.#].[^\s]*'
 
 # Read the file to get the URL from the specified line number
 URL=$(sed "$1!d" "$TODO_FILE" | grep -E -o "$URL_REGEX")
